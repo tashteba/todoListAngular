@@ -1,0 +1,14 @@
+<div>
+    <input type="text" [(ngModel)] = "inputData" > <button (click)="add()">Ajouter de tache</button>
+    <div *ngIf = "todolist.length > 0">
+      <ul *ngFor="let task of todolist; index as i;">
+        <li>
+          {{ task }}
+          <button (click)="delete(i)">Supprimer</button>
+  
+        </li>
+      </ul>
+    </div>
+  
+  </div>
+  
